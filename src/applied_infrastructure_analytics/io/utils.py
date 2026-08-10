@@ -5,7 +5,7 @@ import numpy as np
 from pathlib import Path
 
 
-def descriptive_statistics(df:pd.DataFrame) -> dict:
+def descriptive_statistics(df:pd.DataFrame) -> pd.DataFrame:
     """
     Calculates descriptive statistics for the dataset.
 
@@ -20,7 +20,7 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
             If the Pandas DataFrame is empty.
 
     Returns:
-        A dictionary with the following values:
+        A pandas DataFrame with the following values:
             observations:
                 Provides the number of observations in the dataset
             mean
@@ -38,31 +38,25 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
             std_dev
                 The standard deviation, which is the square root of the variance.
     """
-    # Error handling
+    # Error Handling
     if not isinstance(df, pd.DataFrame):
-        raise TypeError("Passed argument must be a Pandas DataFrame.")
-    if df.empty:
-        raise ValueError("Dataframe must contain values.")
+        raise TypeError("Passed argument must be a pandas DataFrame.")
 
+    if df.empty:
+        raise ValueError("DataFrame must contain values.")
+
+    # Extract the relevant column for analysis
     flow = df["peak_flow_cfs"]
-    observations = df.shape[0]
-    sample_mean = float(flow.mean())
-    sample_median = float(flow.median())
-    sample_max = int(flow.max())
-    sample_min = int(flow.min())
-    sample_range = int(sample_max - sample_min)
-    sample_variance = float(flow.var())
-    sample_standard_deviation = float(flow.std())
 
     summary = {
-        "observations": observations,
-        "sample_mean": sample_mean,
-        "sample_median": sample_median,
-        "sample_max": sample_max,
-        "sample_min": sample_min,
-        "sample_range": sample_range,
-        "sample_variance": sample_variance,
-        "sample_standard_deviation": sample_standard_deviation,
+        "observations": len(flow),
+        "mean": flow.mean(),
+        "median": flow.median(),
+        "minimum": flow.min(),
+        "maximum": flow.max(),
+        "range": flow.max() - flow.min(),
+        "variance": flow.var(),
+        "std_dev": flow.std(),
     }
 
-    return summary
+    return pd.DataFrame([summary])
