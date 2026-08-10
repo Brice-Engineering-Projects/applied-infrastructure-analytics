@@ -106,9 +106,9 @@ Record your observations before continuing.
 
 ---
 
-## Part 3 – Probability Distribution Function (PDF)
+## Part 3 – Probability Density Function (PDF)
 
-Estimate the Probability Distribution Function for the observed data.
+Estimate the Probability Density Function for the observed data.
 
 Overlay the PDF on the histogram.
 
@@ -122,7 +122,7 @@ Think about how this differs from the histogram.
 
 ---
 
-## Part 4 – Cumulative Distribution Function (CDF)
+## Part 4 – Cumulative Density Function (CDF)
 
 Construct the empirical CDF.
 
