@@ -37,8 +37,8 @@ The primary objectives of this project are to:
 
 | Lesson | Topic                                   | Status |
 | ------ | --------------------------------------- | :----: |
-| 00     | Histograms, PDF & CDF                   |   🚧   |
-| 01     | Descriptive Statistics                  |    ⏳   |
+| 00     | Histograms, PDF & CDF                   |    ✅   |
+| 01     | Descriptive Statistics                  |    🚧   |
 | 02     | Common Probability Distributions        |    ⏳   |
 | 03     | Return Periods & Exceedance Probability |    ⏳   |
 | 04     | Confidence Intervals                    |    ⏳   |
