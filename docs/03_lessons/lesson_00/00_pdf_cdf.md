@@ -195,3 +195,37 @@ In future lessons, this project will build upon these concepts by introducing:
 - Time series analysis
 
 Each lesson will continue to use realistic engineering datasets and practical infrastructure problems rather than purely academic examples.
+
+# Applied Exercise
+
+You have now used a small hydrologic dataset to learn how histograms,
+probability density functions, cumulative distribution functions, and
+exceedance probabilities describe observed uncertainty.
+
+The next exercise removes much of the instructional scaffolding.
+
+In **Exercise 00a - Water Demand Distribution and Capacity Analysis**, you
+will receive one year of simulated municipal water-system operating data.
+
+Unlike this lesson, the applied exercise requires you to:
+
+- inspect the supplied files,
+- evaluate data quality,
+- determine which variables are relevant,
+- apply the statistical concepts from this lesson,
+- validate your results,
+- and develop an engineering interpretation.
+
+The exercise introduces an important distinction that will become more
+significant later in the curriculum:
+
+> **A probability distribution describes how frequently values occur,
+> but it does not describe when they occur.**
+
+The applied exercise is located at:
+
+`docs/04_exercises/00a_water_demand_distribution/exercise.md`
+
+The associated raw data are located at:
+
+`data/raw/water_distribution/leson_00/00a_water_demand/`
